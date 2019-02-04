@@ -4,11 +4,13 @@ public class User {
     private String nome = null;
     private String sobrenome = null;
     private String dataNascimento = null;
+    private Job job;
 
     //como restringir o tamanho de uma string?
     Scanner input = new Scanner(System.in);
 
-    public User(String nome, String sobrenome, String dataNascimento) {
+
+    public User(String nome, String sobrenome, String dataNascimento, Job job) {
         if (nome == null) {
             System.out.println("O nome não pode estar vazio, insira um nome");
             setNome(input.nextLine());
@@ -29,6 +31,8 @@ public class User {
         } else {
             this.dataNascimento = dataNascimento;
         }
+
+        this.job = job;
     }
 
     public String getNome() {
