@@ -48,7 +48,7 @@ public class User {
     }
 
     public void setSobrenome(String sobrenome) {
-        if (sobrenome == null){
+        if (sobrenome == null) {
             setSobrenome(input.nextLine());
         }
         this.sobrenome = sobrenome;
@@ -59,9 +59,15 @@ public class User {
     }
 
     public void setDataNascimento(String dataNascimento) {
-        if (dataNascimento == null){
+        if (dataNascimento == null) {
             setDataNascimento(input.nextLine());
         }
         this.dataNascimento = dataNascimento;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Nome: " + getNome() + " " + getSobrenome() + "%n" + "Data de nascimento: "
+                + getDataNascimento());
     }
 }
