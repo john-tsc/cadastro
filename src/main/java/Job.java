@@ -43,4 +43,8 @@ public class Job {
         }
         this.salario = salario;
     }
+
+    public String toString(){
+        return String.format("Cargo: "+getCargo() + "%n" + "Salário: "+getSalario());
+    }
 }
